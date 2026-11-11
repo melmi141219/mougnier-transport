@@ -1,0 +1,8 @@
+{
+  "name": "mt-transport",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=26" },
+  "scripts": { "start": "node src/server.js", "test": "node --test" },
+  "dependencies": { "express": "^5" }
+}

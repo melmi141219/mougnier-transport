@@ -1,0 +1,20 @@
+# Ne part jamais sur GitHub.
+# Dépendances (npm install les retrouve)
+node_modules/
+# Notes de construction, réglages locaux de Claude, documents de conception (ils nomment les clients)
+.superpowers/
+.claude/
+docs/
+# Signature scannée d'Eric : reste sur le PC (sans elle, le cachet s'affiche seul)
+src/vues/documents/signature-eric.png
+# Vrais prix d'achat et envois au fournisseur, et les tests qui vérifient ces montants : restent sur le PC
+scripts/prix-reels.js
+tests/marges.test.js
+tests/partenaires-soldes.test.js
+tests/partenaires-etancheite.test.js
+tests/partenaires-offres.test.js
+tests/partenaires-transport.test.js
+# Bases et sauvegardes, si jamais une s'égarait dans le dossier
+*.db
+*.db-wal
+*.db-shm

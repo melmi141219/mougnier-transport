@@ -1,0 +1,36 @@
+/* Contrats, reçus, procès-verbaux : une feuille A4 propre, à l'écran comme à l'impression. */
+@page { size: A4; margin: 18mm; }
+body { margin: 0; background: #e9e7e0; color: #111; font: 11.5pt/1.45 "Segoe UI", Arial, sans-serif; }
+.barre-doc { background: #0d2440; color: #fff; padding: .6rem 1rem; display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+.barre-doc a { color: #fff; }
+.barre-doc button { font: inherit; padding: .4rem .8rem; border: 1px solid #fff; background: #fff; color: #0d2440; border-radius: 4px; cursor: pointer; }
+.barre-doc .etat { border: 1px solid #fff; border-radius: 3px; padding: .1rem .5rem; }
+.barre-doc form { margin: 0; }
+.feuille { background: #fff; max-width: 210mm; margin: 1rem auto; padding: 18mm; }
+.entete { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 2px solid #0d2440; padding-bottom: .5rem; margin-bottom: 1rem; }
+.entete .marque { font-size: 15pt; font-weight: 700; color: #0d2440; }
+.entete .marque em { color: #9a7420; }
+.entete small { display: block; color: #444; }
+h1 { font-size: 15pt; text-align: center; margin: .5rem 0 1rem; }
+h2 { font-size: 12pt; margin: 1.1rem 0 .4rem; }
+p { margin: .4rem 0; text-align: justify; }
+ol { margin: .4rem 0; padding-left: 1.3rem; }
+li { margin: .25rem 0; text-align: justify; }
+table { border-collapse: collapse; width: 100%; margin: .5rem 0; break-inside: avoid; }
+th, td { border: 1px solid #777; padding: .3rem .5rem; text-align: left; vertical-align: top; }
+th { background: #eee; }
+.montant { text-align: right; white-space: nowrap; }
+.signatures { break-inside: avoid; margin-top: 1.2rem; }
+.signatures td { height: 38mm; width: 50%; }
+/* cachet rond et signature du directeur, superposés comme sur un document tamponné */
+.cachet { position: relative; height: 32mm; margin-top: 1mm; }
+.cachet svg { height: 32mm; width: 32mm; }
+.cachet img { position: absolute; left: 20mm; top: 5mm; height: 22mm; mix-blend-mode: multiply; }
+.remplace { border: 1px solid #a8261d; color: #a8261d; padding: .3rem .6rem; }
+/* reste visible à l'impression : un reçu annulé ou un contrat remplacé ne doit pas passer pour valable */
+.avertissement { border: 3px solid #a8261d; color: #a8261d; font-weight: 700; font-size: 13pt; text-align: center; padding: .5rem .8rem; }
+@media print {
+  body { background: #fff; }
+  .barre-doc { display: none; }
+  .feuille { margin: 0; padding: 0; max-width: none; }
+}
